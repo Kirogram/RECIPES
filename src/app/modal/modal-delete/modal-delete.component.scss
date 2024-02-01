@@ -1,0 +1,46 @@
+.modal-header {
+  color: black;
+  height: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 0;
+  border: 0;
+
+  .modal-close-btn {
+    cursor: pointer;
+  }
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-text {
+  white-space: pre-wrap;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.modal-close-box {
+  padding-top: 30px;
+  text-align: right;
+
+  .modal-btn-box {
+    margin: 5px;
+    border: 1px solid #ea522b;
+    border-radius: 8px;
+    background: white;
+    width: 100px;
+    color: #ea522b;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.modal-sub-text {
+  font-size: 12px;
+  text-align: center;
+  padding-top: 10px;
+}

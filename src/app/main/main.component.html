@@ -1,0 +1,78 @@
+<div class="main-header-box">
+  <div class="flex-default option-flex-center">
+    <div>
+      <div class="main-header-text">
+        프로를 위한 프리미엄 레시피
+      </div>
+      <div class="main-header-input">
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>레시피를 검색해 주세요</mat-label>
+            <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+            <mat-icon matSuffix>search</mat-icon>
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+              @for (option of filteredOptions | async; track option) {
+                <mat-option [value]="option">{{ option }}</mat-option>
+              }
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="body main-item-box">
+  <div class="recipes-box">
+    <div class="pizza-list-body">
+      <div *ngFor="let menu of fullMenu" class="recipe-box">
+        <div class="pizza-list-title">{{ menu[0].CATG }} 레시피 <span>Recipes</span></div>
+        <div class="flex-default">
+          <div *ngFor="let data of menu;index as i" class="recipe-item flex-default"
+               [ngClass]="{'hide-data':menuShow==true && i>5}">
+            <div class="recipe-img" [ngStyle]="{'background-image': 'url(' + data.MENU_IMG + ')'}"></div>
+            <div class="recipe-desc">
+              <div class="recipe-title">
+                {{ data.MENU_NAME }}
+              </div>
+              <div class="recipe-text">
+                {{ data.MENU_TEXT }}
+              </div>
+              <div class="recipe-size flex-default">
+                <div *ngFor="let data of data.MENU_SIZE">
+                  {{ data }}사이즈
+                </div>
+              </div>
+              <div class="recipe-button">
+                <button (click)="openSubPage('/detailRecipe',data)">자세히 보기</button>
+              </div>
+            </div>
+          </div>
+          <div class="recipe-full-mode" *ngIf="menuShow==true">
+            <button (click)="menuShow=false">전체보기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <app-youtube></app-youtube>
+    </div>
+
+    <div>
+      <div class="pizza-list-title">기본 가이드 <span>Guide</span></div>
+    </div>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let data of guideData">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ data.GUIDE_TITLE }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div [innerText]="data.GUIDE_DESC"></div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <div class="admin-btn-box">
+    <mat-icon matSuffix *ngIf="openAdmin==false" class="material-icons md-36" (click)="checkAdmin()">settings</mat-icon>
+    <button *ngIf="openAdmin==true" routerLink="/insertRecipe">신규등록</button>
+  </div>
+</div>

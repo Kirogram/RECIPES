@@ -1,0 +1,17 @@
+<div class="modal-header">
+  <span></span>
+  <div class="modal-close-btn" (click)="activeModal.dismiss('Cross click')">X</div>
+</div>
+<div>
+  <div class="modal-body">
+    <div class="modal-text">관리자 암호 입력</div>
+    <div class="modal-sub-text">
+      <input type="password" [(ngModel)]="adminPW">
+    </div>
+    <div class="modal-close-box">
+      <button class="modal-btn-box" (click)="activeModal.close(adminPW)">
+        입력
+      </button>
+    </div>
+  </div>
+</div>

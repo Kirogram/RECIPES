@@ -1,0 +1,23 @@
+<div class="youtube-box">
+  <div class="youtube-title">유튜브 레시피 <span>Youtube Recipes</span></div>
+  <ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false">
+    <ng-template ngbSlide *ngFor="let youtube of youtubeData">
+      <div class="flex-nowrap youtube-scroll">
+        <div *ngFor="let data of youtube" class="youtube-item-box" (click)="moveYoutbe(data.YOUTUBE_URL)">
+          <div>
+            <img [src]="data.YOUTUBE_IMG">
+          </div>
+          <div class="youtube-item-title">
+            {{data.YOUTUBE_TITLE}}
+          </div>
+          <div class="youtube-item-desc">
+            {{data.YOUTUBE_DESC}}
+          </div>
+          <div class="youtube-item-channel">
+            {{data.YOUTUBE_CHANNEL}}
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>

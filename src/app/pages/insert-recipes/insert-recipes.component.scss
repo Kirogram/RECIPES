@@ -1,0 +1,227 @@
+.insert-menu-body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+.catg-box {
+  margin-top: 100px;
+  font-family: "Noto Sans KR", sans-serif;
+  padding: 50px;
+
+  button {
+    background: white;
+    border: 1px solid #505050;
+    color: #505050;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+    -moz-box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+    box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+  }
+
+  div {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: #505050;
+
+    span {
+      font-size: 12px;
+      font-weight: normal;
+    }
+  }
+}
+
+.size-box {
+  width: 600px;
+  font-family: "Noto Sans KR", sans-serif;
+  padding: 20px 0 50px 0;
+  color: #505050;
+
+  button {
+    background: white;
+    border: 1px solid #505050;
+    color: #505050;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+    -moz-box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+    box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+  }
+
+  div {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 20px;
+
+    span {
+      font-size: 12px;
+      font-weight: normal;
+    }
+  }
+
+  .active {
+    background: #505050;
+    color: white;
+  }
+}
+
+.menu-box {
+  width: 600px;
+  font-family: "Noto Sans KR", sans-serif;
+  padding: 20px 0 0 0;
+  color: #505050;
+
+  div {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 20px;
+
+    span {
+      font-size: 12px;
+      font-weight: normal;
+    }
+  }
+
+  .insert-menu-name {
+    text-align: center;
+
+    .mat-mdc-form-field {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+}
+
+.filebox input[type="file"] {
+  display: none;
+}
+
+.filebox label {
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  background: #505050;
+  border: 1px solid #505050;
+}
+
+.data-in-label {
+  width: 100%;
+  max-width: 200px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 5px 10px;
+  border: 1px dashed #505050;
+  margin-left: 10px;
+}
+
+.filebox {
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.insert-menu-title {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px 0;
+  text-align: center;
+
+  span {
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
+
+
+.insert-menu-table {
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+  -moz-box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+  box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+
+  .move-data {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .mat-mdc-form-field {
+    width: 350px;
+  }
+
+  .insert-text-area .mat-mdc-input-element {
+    height: 200px;
+  }
+}
+
+.insert-menu-btn-box {
+  padding: 10px 0;
+  text-align: center;
+
+  button {
+    font-family: "Noto Sans KR", sans-serif;
+    background: gray;
+    border: 0;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+}
+
+.insert-item-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px 0 0 0;
+
+  span {
+    font-size: 12px;
+    font-weight: normal;
+  }
+}
+
+.insert-guide-title {
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+  span {
+    font-size: 12px;
+    font-weight: normal;
+  }
+}
+
+.guide-box {
+  width: 100%;
+  max-width: 600px;
+
+  .guide {
+    width: 100%;
+  }
+
+  .guide-text-area {
+    width: 100%;
+
+    .mat-mdc-input-element {
+      height: 400px;
+    }
+  }
+}

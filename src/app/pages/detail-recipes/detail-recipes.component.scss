@@ -1,0 +1,190 @@
+.bg-gray {
+  background: #f3f3f3;
+}
+
+.main-class {
+  font-family: 'Noto Sans KR', sans-serif;
+  padding: 10px;
+}
+
+.pizza-box {
+  background: white;
+  width: 100%;
+  max-width: 650px;
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+  -moz-box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+  box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+  margin: 20px 0;
+
+}
+
+.pizza-box-header {
+  background: #282828FF;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  padding: 5px;
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+  -moz-box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+  box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+  margin-bottom: 10px;
+}
+
+.pizza-item-header {
+  background: #282828FF;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+  -moz-box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+  box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+  margin-bottom: 10px;
+}
+
+.pizza-item-desc {
+  padding: 10px;
+}
+
+.pizza-img {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  height: 100%;
+  border-radius: 20px;
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+  -moz-box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+  box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+  margin-top: 20px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.pizza-desc {
+  @media (min-width: 600px) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 10px 0;
+  }
+}
+
+.pizza-title {
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 36px;
+  vertical-align: top;
+  padding-right: 30px;
+}
+
+.add-size-button {
+  padding: 10px 20px;
+  background: #505050;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.pizza-btn {
+
+  button {
+    background: white;
+    border: 1px solid #505050;
+    color: #505050;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+    -moz-box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+    box-shadow: 3px 3px 10px 0px rgba(168, 168, 168, 1);
+    @media (min-width: 600px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 14px;
+    }
+  }
+
+  .active-btn {
+    background: #505050;
+    border: 2px solid #505050;
+    color: white;
+
+  }
+
+  .hide-menu {
+    display: none;
+  }
+}
+
+.active-image {
+  animation: opacity-item 1s;
+}
+
+.active-item {
+  animation: opacity-item 1s;
+}
+
+.pizza-sub-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.pizza-sub-desc {
+  padding-left: 20px;
+}
+
+.md-36 {
+  font-size: 36px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.menu-button {
+  text-align: right;
+
+  button {
+    padding: 5px 20px;
+    background: #505050;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    margin-left: 10px;
+  }
+}
+
+.menu-default {
+  font-weight: bold;
+  color: #505050;
+  text-align: center;
+  @media (min-width: 600px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
+}
+
+@-webkit-keyframes opacity-item {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,31 @@
+.menu-main-css {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  font-family: "Noto Sans KR", sans-serif;
+  z-index: 100;
+  @media (min-width: 1025px) {
+    padding: 0 10%;
+  }
+  @media (max-width: 1024px) {
+    padding-left: 10px;
+  }
+  color: white;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.header-background {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.sub-page {
+  color: black;
+  background: rgba(255, 255, 255, 0.8);
+}

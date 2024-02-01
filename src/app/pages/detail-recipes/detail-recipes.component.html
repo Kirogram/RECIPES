@@ -1,0 +1,63 @@
+<div class="body main-class bg-gray">
+  <div class="flex-default option-flex-center-only-vertical">
+    <div class="pizza-img">
+      <div *ngIf="menuData != null">
+        <img [src]="menuData.MENU_IMG">
+      </div>
+    </div>
+    <div class="pizza-desc">
+      <div class="pizza-box">
+        <div class="flex-nowrap pizza-box-header">
+          <div class="pizza-title">
+            {{ menuName }}
+          </div>
+          <div *ngIf="openAdmin==false" class="admin-btn-box menu-button">
+            <mat-icon class="material-icons md-36" (click)="checkAdmin()">settings</mat-icon>
+          </div>
+          <div class="menu-button" *ngIf="openAdmin==true">
+            <button (click)="addMenuSize()">사이즈 추가</button>
+            <button (click)="updateMenu()">수정</button>
+            <button (click)="deleteMenu()">삭제</button>
+          </div>
+        </div>
+        <div class="pizza-btn">
+          <button *ngFor="let data of checkMenuSize" (click)="openPizza(data.MENU_SIZE)"
+                  [ngClass]="{'active-btn':menuSize==data.MENU_SIZE}">{{ data.MENU_SIZE }}사이즈
+          </button>
+        </div>
+      </div>
+      <div class="pizza-box">
+        <div class="pizza-item-header">
+          치즈
+        </div>
+        <div class="pizza-item-desc">
+          {{ menuData.CHEESE }}
+        </div>
+      </div>
+      <div class="pizza-box">
+        <div class="pizza-item-header">
+          토핑
+        </div>
+        <div class="pizza-item-desc">
+          {{ menuData.TOPPING }}
+        </div>
+      </div>
+      <div class="pizza-box">
+        <div class="pizza-item-header">
+          드레즐
+        </div>
+        <div class="pizza-item-desc">
+          {{ menuData.DRZ }}
+        </div>
+      </div>
+      <div class="pizza-box">
+        <div class="pizza-item-header">
+          설명
+        </div>
+        <div class="pizza-item-desc">
+          {{ menuData.TEXT }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

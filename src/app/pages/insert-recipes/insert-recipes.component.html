@@ -1,0 +1,104 @@
+<div class="body insert-menu-body">
+  <div class="flex-default option-flex-center" [ngClass]="{'hide':category!=''}">
+    <div class="catg-box">
+      <div>
+        메뉴 선택 <span>Select Menu</span>
+      </div>
+      <button (click)="category = 'PIZZA'" [ngClass]="{'active':category=='PIZZA'}">피자 메뉴</button>
+      <button (click)="category = 'SIDE'" [ngClass]="{'active':category=='SIDE'}">사이드 메뉴</button>
+      <button (click)="category = 'ETC'" [ngClass]="{'active':category=='ETC'}">가이드</button>
+    </div>
+  </div>
+  <div *ngIf="category!=''&& category!='ETC'">
+    <div class="flex-default option-flex-center">
+      <div class="size-box">
+        <div>
+          사이즈 선택 <span>Select Size</span>
+        </div>
+        <button (click)="inputParamsBox(data)" [ngClass]="{'active':menuSize.indexOf(data)!=-1}"
+                *ngFor="let data of menuSizeBox">{{ data }}사이즈
+        </button>
+      </div>
+    </div>
+    <div class="flex-default option-flex-center">
+      <div class="menu-box" *ngIf="paramsBox.length>0">
+        <div>
+          메뉴 등록 <span>Insert Menu</span>
+        </div>
+        <div class="insert-menu-name">
+          <mat-form-field>
+            <mat-label>메뉴명</mat-label>
+            <input type="text" [(ngModel)]="menuName" matInput>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="flex-default option-flex-center">
+      <div class="flex-nowrap">
+        <div class="insert-menu-table" *ngFor="let data of paramsBox;index as i">
+          <div *ngIf="paramsBox.length>i+1" class="move-data" (click)="moveData(i)">데이터 이동 ></div>
+          <div>{{ data.MENU_SIZE }}사이즈</div>
+          <div class="insert-item-title">
+            이미지 <span>Insert Img</span>
+          </div>
+          <div style="padding: 10px">
+            <img [src]="data.MENU_IMG" style="width: 200px;height: 120px;border: 1px solid #505050">
+          </div>
+          <div class="filebox flex-nowrap">
+            <label for="file{{i}}">파일선택</label>
+            <input type="file" (change)="logoUpload($event,data)" id="file{{i}}" accept="image/*">
+          </div>
+          <div>
+            <mat-form-field>
+              <mat-label>치즈량</mat-label>
+              <textarea matInput [(ngModel)]="data.CHEESE"></textarea>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field>
+              <mat-label>드레즐</mat-label>
+              <textarea matInput [(ngModel)]="data.DRZ"></textarea>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field>
+              <mat-label>토핑</mat-label>
+              <textarea matInput [(ngModel)]="data.TOPPING"></textarea>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="insert-text-area">
+              <mat-label>내용입력</mat-label>
+              <textarea matInput [(ngModel)]="data.TEXT"></textarea>
+            </mat-form-field>
+          </div>
+          <div class="insert-menu-btn-box" *ngIf="paramsBox.length>0">
+            <button (click)="verificationMenu(data)">메뉴 등록</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex-default option-flex-center" *ngIf="category!=''&& category=='ETC'">
+    <div class="guide-box">
+      <div class="insert-guide-title">
+        일반 가이드 등록 <span>Insert Default Guide</span>
+      </div>
+      <div>
+        <mat-form-field class="guide">
+          <mat-label>제목</mat-label>
+          <input type="text" [(ngModel)]="etcTitle" matInput>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="guide-text-area">
+          <mat-label>내용입력</mat-label>
+          <textarea matInput [(ngModel)]="etcDesc"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="insert-menu-btn-box">
+        <button (click)="insertGuide()">가이드 등록</button>
+      </div>
+    </div>
+  </div>
+</div>
