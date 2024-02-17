@@ -10,7 +10,7 @@
             <mat-label>레시피를 검색해 주세요</mat-label>
             <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
             <mat-icon matSuffix>search</mat-icon>
-            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="test()">
               @for (option of filteredOptions | async; track option) {
                 <mat-option [value]="option">{{ option }}</mat-option>
               }

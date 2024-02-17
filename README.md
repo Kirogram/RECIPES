@@ -1,21 +1,23 @@
+![메인이미지](https://coolcleaner.co.kr/fileDownLoad/17082032986005252.jpg)
+
 # CXD Recipes
 요식업 운영에 필요한 자체 레시피 및 정보들을 저장하여 새롭게 들어오는 직원등에게 손쉽게 인수인계 할 수 있게 만들어주는 가이드 프로세스 입니다. 카테고리에 제한은 없으나 실제 적용 사례를 간단하게 보고싶어서 아는지인이 운영하는 피자집을 샘플로 만들었습니다.
 
 포트폴리오로 활용할 수 있도록 데이터는 더미데이터를 넣어놨으며 차후 실제 사이트에 적용시켜 직원 교육 및 지점별 운영 가이드로 활용될 계획입니다.
 
-LIVE URL : https://admin.cxdpizza.co.kr
+### LIVE URL : https://admin.cxdpizza.co.kr
 
 ### Tech Stack
 
-F/E : Angular 17+ , HTML , TypeScripts , SCSS\
-B/E : JAVA , Spring Framework , JPA , MyBatis\
-Server : Linux Ubuntu server 21+\
-D/B : Oracle 11e
+**Front-End** : Angular , HTML , TypeScripts , SCSS   
+**Back-End** : JAVA , Spring Framework , JPA , MyBatis  
+**Server** : Ubuntu , Tomcat  
+**DataBase** : Oracle  
 
 ### Contribution
-기정환 단독개발 기여도 100%
+기정환 단독개발
 
-### SCREEN
+## SCREEN
 ***
 
 #### 메인페이지
@@ -124,11 +126,6 @@ moveData(index: number) {
     this.paramsBox[index + 1].MENU_SIZE = beforeSize;
   }
 ```
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. \
-The application will automatically reload if you change any of the source files.
 
 ### LICENSE
 ***

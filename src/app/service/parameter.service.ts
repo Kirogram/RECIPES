@@ -6,13 +6,7 @@ import {Router} from '@angular/router';
 })
 export class ParameterService {
 
-  userInfo = {status: 'fail', userName: null};
   url = null;
-  browserWidth = 0;
-  privacy = 1;
-  cleanType = 1;
-  cleanTypeItem = 0;
-  shopSession = false;
 
 
   constructor(private router: Router) {

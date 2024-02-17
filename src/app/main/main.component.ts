@@ -47,6 +47,17 @@ export class MainComponent {
     this.selectGuide();
   }
 
+  test() {
+    console.log(this.myControl.getRawValue());
+    this.router.navigate(['/detailRecipe'], {
+      queryParams: {
+        menuName: this.myControl.getRawValue(),
+        catg: 'pizza',
+        pageLink: '/detailRecipe'
+      }
+    });
+  }
+
   private _filter(value: string): string[] {
     if (value === '') return [];
 
