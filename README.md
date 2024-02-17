@@ -18,7 +18,6 @@
 기정환 단독개발
 
 ## SCREEN
-***
 
 #### 메인페이지
 ![메인페이지](https://coolcleaner.co.kr/fileDownLoad/1706821441824rcpmain.png)
@@ -128,6 +127,5 @@ moveData(index: number) {
 ```
 
 ### LICENSE
-***
 GNU General Public License(GPL) 2.0  
 본 프로젝트에 사용된 이미지는 상업용 이미지로 무단 사용을 금지합니다.
